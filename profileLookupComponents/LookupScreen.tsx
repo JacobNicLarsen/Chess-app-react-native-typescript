@@ -22,7 +22,7 @@ function LookupScreen() {
   
     const ProfileComponent = () => {
       return (
-        <>
+        <View >
           <Text>{profile?.player_id}</Text>
           <Text>{profile?.['@id']}</Text>
           <Text>{profile?.url}</Text>
@@ -33,7 +33,7 @@ function LookupScreen() {
           <Text>{profile?.status}</Text>
           <Text>{profile?.is_streamer}</Text>
           <Text>{profile?.verified}</Text>
-        </>
+        </View>
       )
     }
   
