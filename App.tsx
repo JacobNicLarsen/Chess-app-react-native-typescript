@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { View, Button } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LookupScreen from "./profileLookupComponents/LookupScreen"
-import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import { ApplicationProvider, Layout, Text, Button } from '@ui-kitten/components';
 import * as eva from "@eva-design/eva"
 
 
@@ -14,15 +13,12 @@ function HomeScreen() {
   return (
     <Layout style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
-      <Button
-        title="New Game"
-        onPress={() => navigation.navigate('Board')}
-      />
-      <></>
-      <Button
-        title="Lookup User"
-        onPress={() => navigation.navigate('Lookup')}
-      />
+      <Button onPress={() => navigation.navigate('Board')}>
+           New Game
+      </Button>
+      <Button onPress={() => navigation.navigate('Lookup')}>
+        Lookup profile  
+      </Button>
     </Layout>
   );
 }
